@@ -1,33 +1,16 @@
-// Copyright (c) 2015, Emir Pasic. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 package arraystack
 
 import (
 	"github.com/emirpasic/gods/v2/containers"
 )
 
-// Assert Serialization implementation
 var _ containers.JSONSerializer = (*Stack[int])(nil)
 var _ containers.JSONDeserializer = (*Stack[int])(nil)
 
-// ToJSON outputs the JSON representation of the stack.
-func (stack *Stack[T]) ToJSON() ([]byte, error) {
-	return stack.list.ToJSON()
-}
+func (stack *Stack[T]) ToJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
-// FromJSON populates the stack from the input JSON representation.
-func (stack *Stack[T]) FromJSON(data []byte) error {
-	return stack.list.FromJSON(data)
-}
+func (stack *Stack[T]) FromJSON(data []byte) error { _ = "STUB: not implemented"; return nil }
 
-// UnmarshalJSON @implements json.Unmarshaler
-func (stack *Stack[T]) UnmarshalJSON(bytes []byte) error {
-	return stack.FromJSON(bytes)
-}
+func (stack *Stack[T]) UnmarshalJSON(bytes []byte) error { _ = "STUB: not implemented"; return nil }
 
-// MarshalJSON @implements json.Marshaler
-func (stack *Stack[T]) MarshalJSON() ([]byte, error) {
-	return stack.ToJSON()
-}
+func (stack *Stack[T]) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
